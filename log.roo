@@ -25,3 +25,11 @@ field reference --fieldName school --type ~.domain.School --class ~.domain.Team
 field set --fieldName teams --type ~.domain.Team --class ~.domain.School --mappedBy school
 web mvc all --package ~.web
 web mvc controller --class ~.web.CalendarController 
+finder list --class ~.domain.Event
+finder add --finderName "findEventsByEventDateBetween"
+json add
+web mvc json add --jsonObject ~.domain.Event
+web mvc json add --jsonObject ~.web.EventController --class ~.domain.Event
+field string --fieldName title --transient yes
+// [failed] field number --fieldName start --transient yes --type java.lang.Long
+field number --fieldName start --transient yes --type java.lang.Long --permitReservedWords 

@@ -24,7 +24,7 @@
                       start:Math.round(start.getTime() / 1000),
                       end:Math.round(end.getTime() / 1000)
                   };
-                  $.getJSON('${eventsFeed}',data,function(data){if(window.console) console.log('line number 22', data);});
+                  $.getJSON('${eventsFeed}',data,function(events){callback(events)});
               }
           });
       </script>
