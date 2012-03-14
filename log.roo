@@ -13,3 +13,15 @@ field string --fieldName opponentScore
 web mvc setup
 web mvc all --package ~
 perform package
+// Spring Roo 1.2.0.RELEASE [rev 39eb957] log opened at 2012-03-13 21:21:04
+web mvc json setup
+web mvc setup
+web mvc json all 
+web mvc all --package ~.web
+web mvc json all 
+entity jpa --class ~.domain.School --testAutomatically 
+field string --fieldName name --notNull 
+field reference --fieldName school --type ~.domain.School --class ~.domain.Team
+field set --fieldName teams --type ~.domain.Team --class ~.domain.School --mappedBy school
+web mvc all --package ~.web
+web mvc controller --class ~.web.CalendarController 

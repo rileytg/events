@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_sport" z="rlRdzGHkHcFJN8Eb/Y9NvHpo+rE=">
+            <menu:item id="i_sport_new" messageCode="global_menu_new" url="/sports?form" z="jdou8PPu2yCbtL5DBr68Xjbu6Pk="/>
+            <menu:item id="i_sport_list" messageCode="global_menu_list" url="/sports?page=1&amp;size=${empty param.size ? 10 : param.size}" z="iqMY9FBkETNY7DJ6yFZPDBsZf6U="/>
+        </menu:category>
+        <menu:category id="c_team" z="ohZmKV2mHAiozGa+l7W8lVsp36Q=">
+            <menu:item id="i_team_new" messageCode="global_menu_new" url="/teams?form" z="4tXqOwL6AGKXY3eI3MjIlHBiYRc="/>
+            <menu:item id="i_team_list" messageCode="global_menu_list" url="/teams?page=1&amp;size=${empty param.size ? 10 : param.size}" z="e0UEGo6L31cC31D4lgkjPEbpROM="/>
+        </menu:category>
+        <menu:category id="c_sportlevel" z="1REPt5jJ9YCI4B1dNn09XdSBeG4=">
+            <menu:item id="i_sportlevel_new" messageCode="global_menu_new" url="/sportlevels?form" z="mKm6i9zPqtlDWbzXSq1DUqDbEaM="/>
+            <menu:item id="i_sportlevel_list" messageCode="global_menu_list" url="/sportlevels?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Bf87P8CAG+b8qP57/fRlMurb8ks="/>
+        </menu:category>
+        <menu:category id="c_event" z="AURyeKTmOObIARXqfI9DXukJNIE=">
+            <menu:item id="i_event_new" messageCode="global_menu_new" url="/events?form" z="BObcRn250Q23VbXG8kWIXR49efE="/>
+            <menu:item id="i_event_list" messageCode="global_menu_list" url="/events?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MxywFHCy64/coyVU05GEg92ERF4="/>
+        </menu:category>
+        <menu:category id="c_school" z="eoW7JdH3G0Eir4+oiWePRRnMWDw=">
+            <menu:item id="i_school_new" messageCode="global_menu_new" url="/schools?form" z="YQvy0whAMcyIGP8oZNdr7W6+FS0="/>
+            <menu:item id="i_school_list" messageCode="global_menu_list" url="/schools?page=1&amp;size=${empty param.size ? 10 : param.size}" z="OEaKBOVYv2YEgPkDPI2kaB2MGPY="/>
+        </menu:category>
+        <menu:category id="c_controller" z="nj8Dm3hojIyIEyPkwE1UMDIs+K8=">
+            <menu:item id="i_controller__calendarindex_id" messageCode="global_generic" url="/calendar/index" z="2fKJosO14wZNK04OKyW+gIspVFM="/>
+        </menu:category>
+    </menu:menu>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_tap_hw_domain_Team" modelAttribute="team" path="/teams" versionField="Version" z="negRzh3F1OQDlH74m4Gy3xC+NQ4=">
+        <field:select field="gender" id="c_tap_hw_domain_Team_gender" items="${genders}" path="genders" required="true" z="2L/tXNHyuUkkq3qrt6biMF6rW5U="/>
+        <field:select field="sport" id="c_tap_hw_domain_Team_sport" itemValue="id" items="${sports}" path="/sports" z="UuIOUtGC3/aGwy4CyaS0c6XQcNg="/>
+        <field:select field="sportLevel" id="c_tap_hw_domain_Team_sportLevel" itemValue="id" items="${sportlevels}" path="/sportlevels" z="JCdMGHSoQyJXHa0zo6E63KNUCWI="/>
+        <field:select field="school" id="c_tap_hw_domain_Team_school" itemValue="id" items="${schools}" path="/schools" z="cm30Yn+t5sy3waC9+mWEGrbhAHM="/>
+    </form:update>
+</div>

@@ -13,6 +13,8 @@ import javax.validation.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import tap.hw.domain.Gender;
+import tap.hw.domain.School;
+import tap.hw.domain.SchoolDataOnDemand;
 import tap.hw.domain.Sport;
 import tap.hw.domain.SportDataOnDemand;
 import tap.hw.domain.SportLevel;
@@ -29,6 +31,9 @@ privileged aspect TeamDataOnDemand_Roo_DataOnDemand {
     private List<Team> TeamDataOnDemand.data;
     
     @Autowired
+    private SchoolDataOnDemand TeamDataOnDemand.schoolDataOnDemand;
+    
+    @Autowired
     private SportDataOnDemand TeamDataOnDemand.sportDataOnDemand;
     
     @Autowired
@@ -37,6 +42,7 @@ privileged aspect TeamDataOnDemand_Roo_DataOnDemand {
     public Team TeamDataOnDemand.getNewTransientTeam(int index) {
         Team obj = new Team();
         setGender(obj, index);
+        setSchool(obj, index);
         setSport(obj, index);
         setSportLevel(obj, index);
         return obj;
@@ -45,6 +51,11 @@ privileged aspect TeamDataOnDemand_Roo_DataOnDemand {
     public void TeamDataOnDemand.setGender(Team obj, int index) {
         Gender gender = Gender.class.getEnumConstants()[0];
         obj.setGender(gender);
+    }
+    
+    public void TeamDataOnDemand.setSchool(Team obj, int index) {
+        School school = schoolDataOnDemand.getRandomSchool();
+        obj.setSchool(school);
     }
     
     public void TeamDataOnDemand.setSport(Team obj, int index) {

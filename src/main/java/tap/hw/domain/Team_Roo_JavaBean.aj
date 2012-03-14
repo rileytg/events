@@ -4,6 +4,7 @@
 package tap.hw.domain;
 
 import tap.hw.domain.Gender;
+import tap.hw.domain.School;
 import tap.hw.domain.Sport;
 import tap.hw.domain.SportLevel;
 import tap.hw.domain.Team;
@@ -32,6 +33,14 @@ privileged aspect Team_Roo_JavaBean {
     
     public void Team.setSportLevel(SportLevel sportLevel) {
         this.sportLevel = sportLevel;
+    }
+    
+    public School Team.getSchool() {
+        return this.school;
+    }
+    
+    public void Team.setSchool(School school) {
+        this.school = school;
     }
     
 }

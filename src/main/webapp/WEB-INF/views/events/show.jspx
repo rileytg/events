@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_tap_hw_domain_Event" object="${event}" path="/events" z="gbTe0WiBYPW00lyu0/IaeIA8AYw=">
+        <field:display field="team" id="s_tap_hw_domain_Event_team" object="${event}" z="FWyGoGJZ4CTkg7afHz/cpl9ztrI="/>
+        <field:display field="location" id="s_tap_hw_domain_Event_location" object="${event}" z="+hH69kTwJmdN7mHrQVRi+NiV1PQ="/>
+        <field:display date="true" dateTimePattern="${event_eventdate_date_format}" field="eventDate" id="s_tap_hw_domain_Event_eventDate" object="${event}" z="pFXWb7jRddRPbIr6j4KUufjhzjI="/>
+        <field:display field="opponent" id="s_tap_hw_domain_Event_opponent" object="${event}" z="wOltZCWAwqep2S4MkAd9rMsK0FI="/>
+        <field:display field="hwScore" id="s_tap_hw_domain_Event_hwScore" object="${event}" z="qvbPRR8PIrAjog+hjdywWRFlfKs="/>
+        <field:display field="opponentScore" id="s_tap_hw_domain_Event_opponentScore" object="${event}" z="XVTUryS4Ki170ZYP82ny9qYGcEA="/>
+    </page:show>
+</div>
