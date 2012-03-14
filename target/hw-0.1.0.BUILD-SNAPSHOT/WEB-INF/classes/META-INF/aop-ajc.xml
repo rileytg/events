@@ -1,0 +1,12 @@
+<aspectj>
+<aspects>
+<aspect name="tap.hw.domain.Event_Roo_Jpa_Entity"/>
+<aspect name="tap.hw.EventController_Roo_Controller"/>
+<aspect name="tap.hw.domain.Event_Roo_Jpa_ActiveRecord"/>
+<aspect name="tap.hw.domain.Event_Roo_Configurable"/>
+<aspect name="tap.hw.domain.Event_Roo_Equals"/>
+<aspect name="tap.hw.domain.Event_Roo_JavaBean"/>
+<aspect name="tap.hw.domain.Event_Roo_ToString"/>
+</aspects>
+</aspectj>
+

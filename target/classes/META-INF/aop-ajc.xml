@@ -1,0 +1,30 @@
+<aspectj>
+<aspects>
+<aspect name="tap.hw.web.EventController_Roo_Controller"/>
+<aspect name="tap.hw.domain.SportLevel_Roo_JavaBean"/>
+<aspect name="tap.hw.domain.Event_Roo_Jpa_Entity"/>
+<aspect name="tap.hw.web.SportController_Roo_Controller"/>
+<aspect name="tap.hw.domain.Sport_Roo_Jpa_ActiveRecord"/>
+<aspect name="tap.hw.domain.Sport_Roo_ToString"/>
+<aspect name="tap.hw.domain.Sport_Roo_Jpa_Entity"/>
+<aspect name="tap.hw.domain.SportLevel_Roo_Configurable"/>
+<aspect name="tap.hw.domain.Team_Roo_ToString"/>
+<aspect name="tap.hw.domain.Team_Roo_Jpa_Entity"/>
+<aspect name="tap.hw.domain.Event_Roo_Equals"/>
+<aspect name="tap.hw.web.TeamController_Roo_Controller"/>
+<aspect name="tap.hw.domain.Team_Roo_Jpa_ActiveRecord"/>
+<aspect name="tap.hw.domain.Sport_Roo_Configurable"/>
+<aspect name="tap.hw.domain.SportLevel_Roo_Jpa_Entity"/>
+<aspect name="tap.hw.domain.Event_Roo_Jpa_ActiveRecord"/>
+<aspect name="tap.hw.domain.Event_Roo_Configurable"/>
+<aspect name="tap.hw.domain.SportLevel_Roo_Jpa_ActiveRecord"/>
+<aspect name="tap.hw.domain.Event_Roo_JavaBean"/>
+<aspect name="tap.hw.domain.SportLevel_Roo_ToString"/>
+<aspect name="tap.hw.domain.Team_Roo_JavaBean"/>
+<aspect name="tap.hw.domain.Sport_Roo_JavaBean"/>
+<aspect name="tap.hw.domain.Team_Roo_Configurable"/>
+<aspect name="tap.hw.domain.Event_Roo_ToString"/>
+<aspect name="tap.hw.web.SportLevelController_Roo_Controller"/>
+</aspects>
+</aspectj>
+

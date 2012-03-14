@@ -1,0 +1,9 @@
+<aspectj>
+<aspects>
+<aspect name="tap.hw.domain.EventDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="tap.hw.domain.EventIntegrationTest_Roo_Configurable"/>
+<aspect name="tap.hw.domain.EventDataOnDemand_Roo_Configurable"/>
+<aspect name="tap.hw.domain.EventIntegrationTest_Roo_IntegrationTest"/>
+</aspects>
+</aspectj>
+

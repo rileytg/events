@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_tap_hw_domain_Event" items="${events}" z="GLpOTorFQjJn5L3VSJwzbfnSvms=">
+        <table:table data="${events}" id="l_tap_hw_domain_Event" path="/events" z="CWCM6SsRG+0t6iiuZ2YBNrKWpXI=">
+            <table:column id="c_tap_hw_domain_Event_location" property="location" z="CsdqmUZEFiO+rrc5EUnbS6YuaWY="/>
+            <table:column date="true" dateTimePattern="${event_eventdate_date_format}" id="c_tap_hw_domain_Event_eventDate" property="eventDate" z="2vHigfE9P1c0nP+L9qvajpbaO84="/>
+            <table:column id="c_tap_hw_domain_Event_opponent" property="opponent" z="thhLTQFXk6JGrcj8usmRkk24Ea4="/>
+            <table:column id="c_tap_hw_domain_Event_hwScore" property="hwScore" z="ywGkUO1oAWEd3c5WwoFFXgmoQFM="/>
+            <table:column id="c_tap_hw_domain_Event_opponentScore" property="opponentScore" z="U2jS86SRMr5yImzgdgtmqF1gMdI="/>
+            <table:column id="c_tap_hw_domain_Event_team" property="team" z="RZK+uEu+ON3PCLNKJJlQuQ+iDqc="/>
+        </table:table>
+    </page:list>
+</div>

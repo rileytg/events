@@ -1,0 +1,15 @@
+project --topLevelPackage tap.hw
+hint
+jpa setup --database HYPERSONIC_PERSISTENT --provider HIBERNATE 
+entity jpa --class ~.domain.Event --testAutomatically --equals 
+field string --fieldName gender --notNull  
+field string --fieldName sport --notNull  
+field string --fieldName team --notNull  
+field string --fieldName location --notNull
+field date --fieldName eventDate --type java.util.Date
+field string --fieldName opponent
+field string --fieldName hwScore 
+field string --fieldName opponentScore
+web mvc setup
+web mvc all --package ~
+perform package
