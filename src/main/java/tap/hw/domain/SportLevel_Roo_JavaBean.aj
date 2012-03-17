@@ -15,4 +15,12 @@ privileged aspect SportLevel_Roo_JavaBean {
         this.name = name;
     }
     
+    public String SportLevel.getCode() {
+        return this.code;
+    }
+    
+    public void SportLevel.setCode(String code) {
+        this.code = code;
+    }
+    
 }

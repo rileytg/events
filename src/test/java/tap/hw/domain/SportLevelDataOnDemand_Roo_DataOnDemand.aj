@@ -24,8 +24,14 @@ privileged aspect SportLevelDataOnDemand_Roo_DataOnDemand {
     
     public SportLevel SportLevelDataOnDemand.getNewTransientSportLevel(int index) {
         SportLevel obj = new SportLevel();
+        setCode(obj, index);
         setName(obj, index);
         return obj;
+    }
+    
+    public void SportLevelDataOnDemand.setCode(SportLevel obj, int index) {
+        String code = "code_" + index;
+        obj.setCode(code);
     }
     
     public void SportLevelDataOnDemand.setName(SportLevel obj, int index) {

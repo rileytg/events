@@ -12,4 +12,6 @@ public class SportLevel {
 
     @NotNull
     private String name;
+
+    private String code;
 }

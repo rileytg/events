@@ -49,14 +49,6 @@ privileged aspect EventController_Roo_Controller {
         return "events/create";
     }
     
-    @RequestMapping(value = "/{id}", produces = "text/html")
-    public String EventController.show(@PathVariable("id") Long id, Model uiModel) {
-        addDateTimeFormatPatterns(uiModel);
-        uiModel.addAttribute("event", Event.findEvent(id));
-        uiModel.addAttribute("itemId", id);
-        return "events/show";
-    }
-    
     @RequestMapping(produces = "text/html")
     public String EventController.list(@RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         if (page != null || size != null) {

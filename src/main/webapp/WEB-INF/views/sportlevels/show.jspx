@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_tap_hw_domain_SportLevel" object="${sportlevel}" path="/sportlevels" z="UqF3WqBPhDjg6kwjZ8oP/jAfRSw=">
         <field:display field="name" id="s_tap_hw_domain_SportLevel_name" object="${sportlevel}" z="GiI+vxxDjiDRQeTg4UTnNtlpe1c="/>
+        <field:display field="code" id="s_tap_hw_domain_SportLevel_code" object="${sportlevel}" z="E1qHvtBhV+pG8WBy62z8flzA744="/>
     </page:show>
 </div>

@@ -5,7 +5,8 @@
   <spring:message code="label_calendar_index" htmlEscape="false" var="title"/>
     <spring:message code="application_name" htmlEscape="false" var="app_name"/>
     <spring:url value="calendar/eventFeed" var="eventsFeed"/>
-    ${eventsFeed}
+    <spring:url value="events/" var="viewEvent"/>
+    <div id="dialog" style="display: none;">event info</div>
     <div id="calendar"></div>
       <script type="text/javascript">
           var date = new Date();
@@ -25,7 +26,14 @@
                       end:Math.round(end.getTime() / 1000)
                   };
                   $.getJSON('${eventsFeed}',data,function(events){callback(events)});
-              }
+              },
+              eventClick:function(event, jsEvent, view){
+                  var dialog = $('#dialog');
+                  dialog.load('${viewEvent}' + event.id,{inPopup:true}, function(){
+                      dialog.dialog();
+                  });
+              },
+              allDayDefault:false
           });
       </script>
       <style type='text/css'>

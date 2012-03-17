@@ -33,3 +33,4 @@ web mvc json add --jsonObject ~.web.EventController --class ~.domain.Event
 field string --fieldName title --transient yes
 // [failed] field number --fieldName start --transient yes --type java.lang.Long
 field number --fieldName start --transient yes --type java.lang.Long --permitReservedWords 
+field string --fieldName code --class ~.domain.SportLevel 

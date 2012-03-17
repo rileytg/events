@@ -4,6 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_tap_hw_domain_SportLevel" modelAttribute="sportLevel" path="/sportlevels" render="${empty dependencies}" z="K1rwuEp8esMy0ZZSOxtOxKhV3Q8=">
         <field:input field="name" id="c_tap_hw_domain_SportLevel_name" required="true" z="B/XRgJmIfkoz08j3N1NuL8Yc9p8="/>
+        <field:input field="code" id="c_tap_hw_domain_SportLevel_code" z="k8kp7Tlg6ch8txtXvs8nSfnQDzg="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_tap_hw_domain_SportLevel" render="${not empty dependencies}" z="g7+i9y/zaXlduWS1bXuacHUfEZE="/>
 </div>

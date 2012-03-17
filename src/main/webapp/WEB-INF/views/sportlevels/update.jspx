@@ -4,5 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_tap_hw_domain_SportLevel" modelAttribute="sportLevel" path="/sportlevels" versionField="Version" z="/u6OvDiz4af0eXF0D+zqN6zkJFM=">
         <field:input field="name" id="c_tap_hw_domain_SportLevel_name" required="true" z="B/XRgJmIfkoz08j3N1NuL8Yc9p8="/>
+        <field:input field="code" id="c_tap_hw_domain_SportLevel_code" z="k8kp7Tlg6ch8txtXvs8nSfnQDzg="/>
     </form:update>
 </div>

@@ -6,6 +6,7 @@ package tap.hw.web;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.format.FormatterRegistry;
+import tap.hw.domain.Event;
 import tap.hw.domain.School;
 import tap.hw.domain.Sport;
 import tap.hw.domain.SportLevel;
@@ -15,6 +16,30 @@ import tap.hw.web.ApplicationConversionServiceFactoryBean;
 privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService {
     
     declare @type: ApplicationConversionServiceFactoryBean: @Configurable;
+    
+    public Converter<Event, String> ApplicationConversionServiceFactoryBean.getEventToStringConverter() {
+        return new org.springframework.core.convert.converter.Converter<tap.hw.domain.Event, java.lang.String>() {
+            public String convert(Event event) {
+                return new StringBuilder().append(event.getTitle()).append(" ").append(event.getStart()).append(" ").append(event.getLocation()).append(" ").append(event.getEventDate()).toString();
+            }
+        };
+    }
+    
+    public Converter<Long, Event> ApplicationConversionServiceFactoryBean.getIdToEventConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.Long, tap.hw.domain.Event>() {
+            public tap.hw.domain.Event convert(java.lang.Long id) {
+                return Event.findEvent(id);
+            }
+        };
+    }
+    
+    public Converter<String, Event> ApplicationConversionServiceFactoryBean.getStringToEventConverter() {
+        return new org.springframework.core.convert.converter.Converter<java.lang.String, tap.hw.domain.Event>() {
+            public tap.hw.domain.Event convert(String id) {
+                return getObject().convert(getObject().convert(id, Long.class), Event.class);
+            }
+        };
+    }
     
     public Converter<School, String> ApplicationConversionServiceFactoryBean.getSchoolToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<tap.hw.domain.School, java.lang.String>() {
@@ -67,7 +92,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<SportLevel, String> ApplicationConversionServiceFactoryBean.getSportLevelToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<tap.hw.domain.SportLevel, java.lang.String>() {
             public String convert(SportLevel sportLevel) {
-                return new StringBuilder().append(sportLevel.getName()).toString();
+                return new StringBuilder().append(sportLevel.getName()).append(" ").append(sportLevel.getCode()).toString();
             }
         };
     }
@@ -105,6 +130,9 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     }
     
     public void ApplicationConversionServiceFactoryBean.installLabelConverters(FormatterRegistry registry) {
+        registry.addConverter(getEventToStringConverter());
+        registry.addConverter(getIdToEventConverter());
+        registry.addConverter(getStringToEventConverter());
         registry.addConverter(getSchoolToStringConverter());
         registry.addConverter(getIdToSchoolConverter());
         registry.addConverter(getStringToSchoolConverter());

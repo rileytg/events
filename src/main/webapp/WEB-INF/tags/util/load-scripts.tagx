@@ -12,10 +12,12 @@
     <spring:url value="/resources/images/favicon.ico" var="favicon"/>
     <spring:url value="/resources/js/jquery-1.7.1.min.js" var="jquery_url"/>
     <spring:url value="/resources/js/jquery-ui-1.8.17.custom.min.js" var="jquery_ui_url"/>
+    <spring:url value="/resources/styles/ui-lightness/jquery-ui-1.8.18.custom.css" var="jquery_ui__css_url"/>
     <spring:url value="/resources/js/fullcalendar.js" var="fullcalendar_url"/>
     <spring:url value="/resources/styles/fullcalendar.css" var="fullcalendar_css_url"/>
     <spring:url value="/resources/styles/fullcalendar.print.css" var="fullcalendar_css_print_url"/>
 
+    <link rel="stylesheet" type="text/css" href="${jquery_ui__css_url}"/>
     <link rel="stylesheet" type="text/css" href="${fullcalendar_css_url}"/>
     <link rel="stylesheet" type="text/css" href="${fullcalendar_css_print_url}"/>
     <link rel="stylesheet" type="text/css" href="${tundra_url}"/>
